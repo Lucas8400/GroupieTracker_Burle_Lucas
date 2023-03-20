@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocktails</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://use.typekit.net/sze7yka.css">
+</head>
+
+<body>
+    <header>
+        <img class="logo-navbar" src="./css/assets/Logo Search My Cocktail v2.svg" alt="">
+        <div class="ctn-navbar">
+            <a class="btn-navbar" href="/">Acceuil</a>
+            <a class="btn-navbar" href="">Cocktails</a>
+        </div>
+
+    </header>
+    <div class="main-cocktails">
+        <div class="bg-main-cocktails"></div>
+        <form method="post" action="/search">
+            <div class="ctn-search">
+                <label for="cocktail"><h1>Rechercher un cocktail :</h1></label> <br>
+                <div class="ctn-input">
+                    <input class="search-bar" type="text" id="cocktail" name="cocktail" placeholder="Trouve ton meilleur cocktail">
+                </div>
+            </div>
+        </form>
+
+        {{if .Query}}
+        <h2>Résultats de la recherche pour "{{.Query}}"</h2>
+        {{end}}   
+
+        <div class="ctn-results">
+
+            {{if .Drinks}}
+                {{range .Drinks}}
+                    <a href="/cocktail-details?id={{.ID}}" class="result-link">
+                        <div class="result">
+                            <h3>{{.Name}}</h3>
+                            <img src="{{.Thumbnail}}" alt="{{.Name}}" width="200" height="200">
+                            <p class="instructions">{{.Instructions}}</p>
+                        </div>
+                    </a>
+                {{end}}
+        
+            {{else}}
+                <p class="no-result">Aucun résultat trouvé.</p>
+            {{end}}
+        </div>
+    </div>
+        <footer>
+           <img class="logo-footer" src="./css/assets/Logo Search My Cocktail v3.svg" alt=""> 
+            <div class="ctn-contact-us">
+                <div class="line"></div>
+                <p class="contact-us">CONTACT US</p>
+                <div class="line"></div>
+            </div>
+            <div class="btns-contact">
+                <a href=""><i class="bi bi-envelope"></i></a>
+                <a href=""><i class="bi bi-telephone"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+            </div>
+        </footer>
+</body>
+</html>

@@ -1,0 +1,298 @@
+body{
+    margin: 0;
+    font-family: futura-pt, sans-serif;
+    margin-top: 120px;
+    color: white;
+    background-color: black;
+}
+
+h1{
+    white-space: nowrap;
+}
+
+.ctn-search{
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ctn-input{
+    display: inline-block;
+
+}
+
+.search-bar{
+    height: 35px;
+    width: 400px;
+    border-radius: 20px;
+    border: none;
+}
+
+.search-bar::placeholder {
+    padding: 15px;
+ }
+
+.ctn-results{
+    width: 90%;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap
+}
+
+.result{
+    margin: 10px;
+    text-align: center;
+    width: 250px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 20px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    background-color: white;
+    text-decoration: none;
+}
+
+.result-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.instructions{
+    width: 80%; 
+    height: 80px;
+    overflow-x:hidden;
+    color: black;
+}
+
+.instructions-details{
+    width: 50%;
+}
+
+header{
+    height: 120px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo-navbar{
+    height: 70%;
+    position: relative;
+    left: 8%;
+    bottom: 5%;
+}
+
+.ctn-navbar{
+    width: 20%;
+    position: relative;
+    right: 10%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn-navbar{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.btn-navbar::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #fff800;
+    transition: all 0.5s ease;
+    position: relative;
+    top: 7px;
+}
+
+.btn-navbar:hover::after{
+    width: 100%;
+}
+
+footer{
+    height: 300px; 
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-cocktails{
+    margin-bottom: 120px;
+    width: 100%;
+    display:flex;
+    align-items:center;
+    justify-content: flex-start;
+    flex-direction:column;
+    min-height: 85vh;
+}
+
+.bg-main-cocktails{
+    background-image: url("./assets/bg-cocktails.jpg");
+    background-size: cover;
+    background-position: 100%;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: aliceblue;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+.logo-footer{
+    height: 100px;
+    position: relative;
+    bottom: 40px;
+}
+
+.ctn-contact-us{
+    height: 30px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.line{
+    background-color: white;
+    width: 20vw;
+    height: 3px;
+}
+
+.contact-us{
+    color: white;
+    font-weight: bold;
+    height: 50px;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.btns-contact{
+    height: 40px;
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    top: 25px;
+}
+
+i{
+    color: white;
+    font-size: 30px;
+    transition: all 0.3s ease;
+}
+
+i:hover{
+    color: #fff800;
+}
+
+
+
+.main-index{
+    height: 85vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ctn-text{
+    height: 400px;
+    width: 600px;
+    border: 2px solid white;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+}
+
+.mojito{
+    height: 40vw;
+    position: relative;
+}
+
+.ctn-text-button-cocktails{
+    height: 400px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.text-cocktails{
+    color: white;
+    font-size: 23px;
+    font-weight: lighter;
+}
+
+.btn-cocktails{
+    height: 40px;
+    width: 230px;
+    border: 2px solid #fff800;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    transition: all 0.5s ease;
+}
+
+.btn-cocktails:hover{
+    border: 2px solid white;
+}
+
+h3{
+    color: black;
+}
+
+.menu{
+    list-style: none;
+    font-weight: bold;
+    display: none;
+}
+
+.menu-link{
+    color: white;
+    text-decoration: none;
+}
+
+.main-details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 100px;
+}
+
+@media (max-width: 800px){
+    .ctn-navbar{
+        height: 100%;
+        width: 100px;
+        flex-direction: column;
+        left: 3px;
+    }
+
+}
+
+
