@@ -285,12 +285,20 @@ h3{
     padding-bottom: 100px;
 }
 
-@media (max-width: 800px){
+@media (max-width: 750px){
     .ctn-navbar{
         height: 100%;
-        width: 100px;
-        flex-direction: column;
+        width: 70%;
         left: 3px;
+        padding-top: 30px;
+    }
+    header{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .logo-navbar{
+        position: initial;
     }
 
 }
